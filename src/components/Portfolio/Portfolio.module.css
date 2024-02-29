@@ -1,0 +1,112 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--portfolio_background_color);
+}
+.container {
+    width: var(--container);
+    max-width: var(--max_width);
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 40px;
+    padding: 80px 0px 100px 0;
+    position: relative;
+}
+.titleContainer {
+    width: 100%;
+    height: max-content;
+    position: sticky;
+    z-index: 2;
+    top: 30px;
+    left: 0;
+}
+.titleContainer h1 {
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 130px;
+    line-height: 104%;
+    color: #fff;
+}
+.imageContainer {
+    width: 100%;
+    height: max-content;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+/*  */
+.animTextContainer {
+    width: 100%;
+    margin: auto;
+}
+.items_wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 30px;
+}
+.items_wrap:before,
+.items_wrap:after {
+    content: "";
+    height: 100%;
+    top: 0;
+    width: 10%;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+.items {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    min-width: 100%;
+}
+.item {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px red;
+    font-style: italic;
+    flex: 0 0 auto;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    transition: all 0.1s ease-in-out;
+
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 104%;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.marquee {
+    animation: scroll 30s linear infinite;
+}
+.reverce {
+    animation-direction: reverse;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}

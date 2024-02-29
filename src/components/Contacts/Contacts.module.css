@@ -1,0 +1,80 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--contact_background_color);
+}
+.container {
+    width: var(--container);
+    max-width: var(--max_width);
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px 80px 0;
+}
+.container h1 {
+    text-align: end;
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 130px;
+    line-height: 104%;
+    color: #000;
+}
+.subtitle {
+    width: 100%;
+    text-align: end;
+    color: #ca2c52 !important ;
+}
+.contentContainer {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.contactInfo {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contactInfo a {
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120%;
+    color: #000;
+}
+.contactInfo p {
+    width: 490px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
+}
+.iconContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.buttonWrite {
+    width: 272px;
+    height: 272px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #000;
+    flex-shrink: 0;
+    user-select: none;
+    cursor: pointer;
+
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120%;
+    color: #ca2c52;
+}
