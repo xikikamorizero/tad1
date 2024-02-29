@@ -1,4 +1,5 @@
-import React from "react";
+import { ReactNode, useRef, useEffect } from "react";
+import { useInView } from "framer-motion";
 import style from "./Portfolio.module.css";
 import styled from "styled-components";
 import image1 from "../../assets/portfolio_1.png";
@@ -14,48 +15,79 @@ export const Portfolio = () => {
                 <div className={style.titleContainer}>
                     <h1>ЭТО ТО</h1>
                     <h1>ЧТО МЫ ДЕЛАЕМ</h1>
+                    <div className={style.viewContainer}></div>
                 </div>
                 <div className={style.imageContainer}>
-                    <ImageBlock
-                        width={"600px"}
-                        height={"350px"}
-                        src={image1}
-                        alself={"flex-end"}
-                        margin={"0 20% 0 0 "}
-                    />
-                    <ImageBlock
-                        width={"520px"}
-                        height={"555px"}
-                        src={image2}
-                        alself={"flex-start"}
-                        margin={"200px 0 0 0 "}
-                    />
-                    <ImageBlock
-                        width={"423px"}
-                        height={"282px"}
-                        src={image3}
-                        alself={"flex-end"}
-                        margin={"0 15% 0 0 "}
-                    />
-                    <ImageBlock
-                        width={"423px"}
-                        height={"282px"}
-                        src={image4}
-                        alself={"flex-start"}
-                        margin={"200px 0 0 15% "}
-                    />
-                    <ImageBlock
-                        width={"589px"}
-                        height={"339px"}
-                        src={image5}
-                        alself={"flex-end"}
-                        margin={"20px 15% 0 0"}
-                    />
+                    <Section>
+                        <ImageBlock
+                            className={style.portfolio_image_1}
+                            src={image1}
+                            alself={"flex-end"}
+                            margin={"0 20% 0 0 "}
+                        />
+                    </Section>
+                    <Section>
+                        <ImageBlock
+                            className={style.portfolio_image_2}
+                            src={image2}
+                            alself={"flex-start"}
+                            margin={"200px 0 0 0 "}
+                        />
+                    </Section>
+                    <Section>
+                        <ImageBlock
+                            className={style.portfolio_image_3}
+                            src={image3}
+                            alself={"flex-end"}
+                            margin={"0 15% 0 0 "}
+                        />
+                    </Section>
+                    <Section>
+                        <ImageBlock
+                            className={style.portfolio_image_4}
+                            src={image4}
+                            alself={"flex-start"}
+                            margin={"200px 0 0 15% "}
+                        />
+                    </Section>
+                    <Section>
+                        <ImageBlock
+                            className={style.portfolio_image_5}
+                            src={image5}
+                            alself={"flex-end"}
+                            margin={"20px 15% 0 0"}
+                        />
+                    </Section>
                 </div>
             </div>
         </div>
     );
 };
+
+function Section({ children }: { children: ReactNode }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { amount: 0.6 });
+
+    useEffect(() => {
+        console.log("Element is in view: ", isInView);
+    }, [isInView]);
+
+    return (
+        <section ref={ref}>
+            <span
+                style={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s",
+                }}
+            >
+                {children}
+            </span>
+        </section>
+    );
+}
 
 const AnimText = () => {
     return (
@@ -126,14 +158,10 @@ const AnimText = () => {
 };
 
 const ImageBlock = styled.div<{
-    width: string;
-    height: string;
     src: string;
     margin?: string;
     alself?: string;
 }>`
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
     background-image: url(${(props) => props.src});
     background-size: cover;
     background-position: center;

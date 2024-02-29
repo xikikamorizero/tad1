@@ -16,7 +16,7 @@
     text-align: end;
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 130px;
+    font-size: var(--title_size);
     line-height: 104%;
     color: #000;
 }
@@ -37,27 +37,33 @@
     flex-direction: column;
     gap: 10px;
 }
+.paragContainer {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
 .contactInfo a {
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 30px;
+    font-size: var(--email_size);
     line-height: 120%;
     color: #000;
 }
-.contactInfo p {
-    width: 490px;
+.paragContainer p {
+    width: max-content;
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 20px;
+    font-size: var(--info_text);
     line-height: 120%;
     color: #000;
+    flex-shrink: 0;
 }
 .iconContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .buttonWrite {
@@ -74,7 +80,22 @@
 
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 30px;
+    font-size: var(--email_size);
     line-height: 120%;
     color: #ca2c52;
+}
+@media (max-width: 1068px) {
+    .buttonWrite {
+        width: 30vw;
+        height: 30vw;
+    }
+    .container{
+        padding: 4vw 0px 5vw 0;
+    }
+    .iconContainer{
+        margin-top: 3vw;
+    }
+    .contentContainer{
+        margin-top: 5vw;
+    }
 }

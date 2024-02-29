@@ -71,7 +71,7 @@ const CardReview = ({ scaleML }: { scaleML?: boolean }) => {
         <CardContainer scaleML={scaleML}>
             <div className={style.infoContainer}>
                 <Icon width={"100px"} height={"100px"} icon={quotes} />
-                <p>
+                <p className={style.reviews_text}>
                     Отличное ивент-агентство! Хочу выразить благодарность за их
                     профессиональный подход к организации мероприятия.
                 </p>
@@ -95,10 +95,12 @@ const SlaiderLine = styled.div<{ left: number }>`
     align-items: center;
     gap: 50px;
     position: absolute;
-    top: 50%;
+    top: 0px;
     left: ${(props) => props.left}px;
-    transform: translate(0, -50%);
     transition: all 0.3s;
+    @media (max-width: 1390px) {
+        gap: 0px
+    }
 `;
 
 const CardContainer = styled.div<{ scaleML?: boolean }>`
@@ -113,6 +115,14 @@ const CardContainer = styled.div<{ scaleML?: boolean }>`
     background-color: pink;
     scale: ${(props) => (props.scaleML ? "0.8" : "1")};
     transition: all 0.2s;
+    overflow: hidden;
+
+    @media (max-width: 1090px) {
+        width: 100%;
+        max-width: 780px;
+        gap: 0px;
+        padding: 2vw;
+    }
 `;
 
 const PersonImage = styled.div<{ icon: string }>`
@@ -125,6 +135,10 @@ const PersonImage = styled.div<{ icon: string }>`
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
+    @media (max-width: 1090px) {
+        width: 25vw;
+        height: 25vw;
+    }
 `;
 const Icon = styled.div<{ width: string; height: string; icon: string }>`
     width: ${(props) => props.width};
@@ -136,4 +150,8 @@ const Icon = styled.div<{ width: string; height: string; icon: string }>`
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
+    @media (max-width: 1090px) {
+        width: 5vw;
+        height: 5vw;
+    }
 `;

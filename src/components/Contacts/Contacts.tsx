@@ -15,13 +15,14 @@ export const Contacts = () => {
                 <div className={style.contentContainer}>
                     <div className={style.contactInfo}>
                         <a>info@po4ta.ru</a>
-                        <p>
-                            Следите и узнавайте больше информации о нас. Следите
-                            и узнавайте больше информации о нас. Следите и
-                            узнавайте больше информации о нас. Следите и
-                            узнавайте больше информации о нас. Следите и
-                            узнавайте больше информации о нас.
-                        </p>
+                        <div className={style.paragContainer}>
+                            <p>Следите и узнавайте больше информации о нас.</p>
+                            <p>Следите и узнавайте больше информации о нас.</p>
+                            <p>Следите и узнавайте больше информации о нас.</p>
+                            <p>Следите и узнавайте больше информации о нас.</p>
+                            <p>Следите и узнавайте больше информации о нас.</p>
+                        </div>
+
                         <div className={style.iconContainer}>
                             <Icon icon={faceb} />
                             <Icon icon={insta} />
@@ -44,4 +45,8 @@ const Icon = styled.a<{ icon: string }>`
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    @media (max-width: 1068px) {
+        width: 5vw;
+        height: 5vw;
+    }
 `;

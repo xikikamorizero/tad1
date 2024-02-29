@@ -8,7 +8,9 @@
 .container {
     width: var(--container);
     max-width: var(--max_width);
+    min-height:400px;
     height: calc(100vh - 90px);
+    max-height: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +20,7 @@
     width: 100%;
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 130px;
+    font-size: var(--title_size);
     line-height: 111%;
     color: #ffffe5;
     word-wrap: break-word;
@@ -26,9 +28,21 @@
 .container p {
     margin-top: 50px;
     float: left;
-    width: 500px;
+    width: 100%;
+    max-width: 550px;
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 22px;
+    font-size: var(--subtitle_size);
     color: #f1f1dd;
+}
+@media (max-width: 1518px) {
+    .container p {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        height: calc(100vh - 65px);
+    }
 }

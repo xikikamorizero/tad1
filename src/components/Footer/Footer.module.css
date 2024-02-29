@@ -18,7 +18,7 @@ h1 {
     width: 100%;
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 155px;
+    font-size: var(--footer_title_size);
     line-height: 104%;
     color: #ffffe5;
     text-transform: uppercase;
@@ -44,14 +44,14 @@ h1 {
 .contacts p {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 20px;
+    font-size: var(--info_text);
     line-height: 120%;
     color: #fff;
 }
 .contactBlock a {
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 30px;
+    font-size: var(--email_size);
     line-height: 120%;
     color: #fff;
 }
@@ -64,7 +64,7 @@ h1 {
 .credits p {
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 20px;
+    font-size: var(--info_text);
     line-height: 120%;
     color: #ca2c52;
 }

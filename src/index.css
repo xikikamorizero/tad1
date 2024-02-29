@@ -29,6 +29,13 @@ body {
     --font5: "Rubik Mono One", sans-serif;
     --font6: "Arial", sans-serif;
 
+    --title_size: 130px;
+    --subtitle_size: 22px;
+    --ticker_size: 90px;
+    --email_size: 30px;
+    --info_text: 20px;
+    --footer_title_size: 155px;
+
     --max_width: 1440px;
     --container: 90%;
 
@@ -40,4 +47,18 @@ body {
     --review_background_color: #3b3636;
     --contact_background_color: #ffffff;
     --footer_background_color: #14191c;
+}
+
+@media (max-width:1518px) {
+    :root{
+        --title_size: 8.5vw;
+        --subtitle_size: 2vw;
+    }
+}
+@media (max-width:1068px) {
+    :root{
+        --footer_title_size: 15vw;
+        --email_size: 3vw;
+        --info_text: 2vw;
+    }
 }

@@ -15,7 +15,7 @@
 .container h1 {
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 130px;
+    font-size: var(--title_size);
     line-height: 104%;
     color: #fff;
 }
@@ -38,9 +38,6 @@
 .slaider {
     width: 100%;
     height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 50px;
     overflow: hidden;
     position: relative;
@@ -60,16 +57,18 @@
     box-shadow: inset 0px 0px 60px 80px var(--review_background_color);
 }
 .infoContainer {
+    width: max-content;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
-.infoContainer p {
+.reviews_text {
+    width: 100%;
+    text-align: start;
     padding-left: 40px;
-    width: 420px;
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 20px;
+    font-size: var(--info_text);
     line-height: 104%;
     color: #fff;
 }
@@ -78,10 +77,10 @@
     width: max-content;
     display: flex;
     justify-content: start;
-    gap: 10px;
+    gap: 20px;
 }
 .personNameContainer {
-    width: 250px;
+    width: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,6 +88,36 @@
     gap: 5px;
 }
 .personNameContainer p {
-    width: 100%;
-    padding-left: 0;
+    padding-left: 0px;
+    width: max-content;
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: var(--info_text);
+    line-height: 104%;
+    color: #fff;
+}
+@media (max-width: 1033px) {
+    .container {
+        padding-bottom: 0px;
+    }
+    .slaiderContainer {
+        margin-top: 8vw;
+    }
+    .slaider {
+        height: 40vw;
+    }
+    .shadowBlock {
+        display: none;
+    }
+    .reviews_text {
+        width: 50vw;
+        padding-left: 4vw;
+    }
+    .personContainer {
+        gap: 2vw;
+        margin-top: 2vw;
+    }
+    .personNameContainer p {
+        padding: 0;
+    }
 }

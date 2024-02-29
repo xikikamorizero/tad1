@@ -19,7 +19,7 @@
     width: 100%;
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 130px;
+    font-size: var(--title_size);
     line-height: 104%;
     color: #000;
 }
@@ -36,7 +36,7 @@
 .subtitle p {
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 22px;
+    font-size: var(--subtitle_size);
     line-height: 120%;
     color: #1b2933;
 }
