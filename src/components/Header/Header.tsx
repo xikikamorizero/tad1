@@ -23,13 +23,3 @@ export const Header = () => {
         </div>
     );
 };
-
-const Icon = styled.div<{ width: string; height: string; icon: string }>`
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
-    flex-shrink: 0;
-    background-image: url(${(props) => props.icon});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-`;

@@ -23,7 +23,8 @@
 .subtitle {
     width: 100%;
     text-align: end;
-    color: #ca2c52 !important ;
+    /* color: #ca2c52 !important ; */
+    color: #c11616 !important ;
 }
 .contentContainer {
     width: 100%;
@@ -82,20 +83,30 @@
     font-weight: 900;
     font-size: var(--email_size);
     line-height: 120%;
-    color: #ca2c52;
+    /* color: #ca2c52; */
+    color: #c11616;
+    transition: all 0.3s;
+}
+.buttonWrite:hover {
+    /* background-color: #ca2c52; */
+    background-color: #c11616;
+    color: #000000;
 }
 @media (max-width: 1068px) {
+    .wrapper {
+        display: none;
+    }
     .buttonWrite {
         width: 30vw;
         height: 30vw;
     }
-    .container{
-        padding: 4vw 0px 5vw 0;
+    .container {
+        padding: 6vw 0px 7vw 0;
     }
-    .iconContainer{
+    .iconContainer {
         margin-top: 3vw;
     }
-    .contentContainer{
+    .contentContainer {
         margin-top: 5vw;
     }
 }

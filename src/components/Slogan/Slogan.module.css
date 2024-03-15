@@ -23,7 +23,7 @@
     line-height: 104%;
     color: #000;
 }
-.centerParag{
+.centerParag {
     text-align: center;
 }
 .subtitle {
@@ -40,6 +40,24 @@
     line-height: 120%;
     color: #1b2933;
 }
-.content{
-    width: 700px;
+.content {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (max-width: 1068px) {
+    .container {
+        padding: 60px 0px 80px 0;
+    }
+    .subtitle {
+        margin-top: 14vw;
+        flex-direction: column;
+        gap:5vw;
+    }
+    .content {
+        max-width: 100%;
+        gap: 4vw;
+    }
 }

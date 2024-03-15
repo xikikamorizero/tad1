@@ -70,7 +70,12 @@ const CardReview = ({ scaleML }: { scaleML?: boolean }) => {
     return (
         <CardContainer scaleML={scaleML}>
             <div className={style.infoContainer}>
-                <Icon width={"100px"} height={"100px"} icon={quotes} />
+                <Icon
+                    width={"100px"}
+                    height={"100px"}
+                    icon={quotes}
+                    type={"'"}
+                />
                 <p className={style.reviews_text}>
                     Отличное ивент-агентство! Хочу выразить благодарность за их
                     профессиональный подход к организации мероприятия.
@@ -99,7 +104,7 @@ const SlaiderLine = styled.div<{ left: number }>`
     left: ${(props) => props.left}px;
     transition: all 0.3s;
     @media (max-width: 1390px) {
-        gap: 0px
+        gap: 0px;
     }
 `;
 
@@ -117,11 +122,15 @@ const CardContainer = styled.div<{ scaleML?: boolean }>`
     transition: all 0.2s;
     overflow: hidden;
 
-    @media (max-width: 1090px) {
+    @media (max-width: 1033px) {
         width: 100%;
-        max-width: 780px;
-        gap: 0px;
-        padding: 2vw;
+        max-width: 400px;
+        flex-direction: column-reverse;
+        height: max-content;
+        max-height: 570px;
+        padding: 0px 25px 20px 25px;
+        justify-content: start;
+        align-items: center;
     }
 `;
 
@@ -135,12 +144,21 @@ const PersonImage = styled.div<{ icon: string }>`
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
-    @media (max-width: 1090px) {
-        width: 25vw;
-        height: 25vw;
+    @media (max-width: 1033px) {
+        width: 100%;
+        height: 350px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 `;
-const Icon = styled.div<{ width: string; height: string; icon: string }>`
+const Icon = styled.div<{
+    width: string;
+    height: string;
+    icon: string;
+    type?: string;
+}>`
     width: ${(props) => props.width};
     height: ${(props) => props.height};
     flex-shrink: 0;
@@ -150,8 +168,7 @@ const Icon = styled.div<{ width: string; height: string; icon: string }>`
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
-    @media (max-width: 1090px) {
-        width: 5vw;
-        height: 5vw;
+    @media (max-width: 1033px) {
+        display: ${(props) => (props.type ? "none" : "block")};
     }
 `;

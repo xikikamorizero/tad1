@@ -30,11 +30,14 @@ body {
     --font6: "Arial", sans-serif;
 
     --title_size: 130px;
-    --subtitle_size: 22px;
+    --subtitle_size: 25px;
     --ticker_size: 90px;
     --email_size: 30px;
     --info_text: 20px;
+    --card_info_text: 20px;
     --footer_title_size: 155px;
+    --footer_title_size_mob:30vw;
+    --footer_subtitle_size_mob:4vw;
 
     --max_width: 1440px;
     --container: 90%;
@@ -52,13 +55,25 @@ body {
 @media (max-width:1518px) {
     :root{
         --title_size: 8.5vw;
-        --subtitle_size: 2vw;
     }
 }
 @media (max-width:1068px) {
     :root{
         --footer_title_size: 15vw;
         --email_size: 3vw;
-        --info_text: 2vw;
+        --info_text: 15px;
+        --card_info_text: 15px;
+        --ticker_size: 7vw;
+    }
+}
+@media (max-width:900px) {
+    :root{
+        --subtitle_size: 20px;
+    }
+}
+@media (max-width:500px) {
+    :root{
+        --footer_subtitle_size_mob:18px;
+        --subtitle_size: 14px;
     }
 }

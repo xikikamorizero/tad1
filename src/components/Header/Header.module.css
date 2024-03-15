@@ -4,6 +4,9 @@
     justify-content: center;
     align-items: center;
     background-color: var(--header_background_color);
+    position: absolute;
+    top:0;
+    z-index: 2;
 }
 .container {
     width: var(--container);

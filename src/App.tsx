@@ -8,13 +8,15 @@ import { Slogan } from "./components/Slogan/Slogan";
 import { Contacts } from "./components/Contacts/Contacts";
 import { Reviews } from "./components/Reviews/Reviews";
 import { Portfolio } from "./components/Portfolio/Portfolio";
+import { TestAnim } from "./components/TestAnim/TestAnim";
 
 function App() {
     return (
         <div className="App">
             <Header />
             <Center>
-                <Main />
+                <TestAnim />
+                {/* <Main /> */}
                 <Slogan />
                 <Portfolio />
                 <Reviews />

@@ -14,6 +14,9 @@
     align-items: end;
     padding: 60px 0px 20px 0;
 }
+.footer_desktop {
+    width: 100%;
+}
 h1 {
     width: 100%;
     font-family: var(--second-family);
@@ -67,4 +70,116 @@ h1 {
     font-size: var(--info_text);
     line-height: 120%;
     color: #ca2c52;
+}
+/* Mobile vers */
+.footer_mob {
+    width: 100%;
+    display: none;
+}
+.infoContainer_mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 30px;
+}
+.title_mob {
+    text-align: center;
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: var(--footer_title_size_mob);
+    color: #f4f4f4;
+}
+.subtitleContainer_mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.subtitleContainer_mob h1 {
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: var(--footer_subtitle_size_mob);
+    color: #fff;
+    text-align: end;
+}
+.subtitle_mob {
+    color: #c11616 !important;
+    text-decoration: underline white;
+}
+.sloganContainer_mob {
+    width: 100%;
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 16px;
+    color: #d9d9d9;
+}
+.mail {
+    cursor: pointer;
+    user-select: none;
+}
+.contactInfoContainer_mob {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-family: var(--second-family);
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 120%;
+    color: #bfb9ba;
+}
+.inputContainer {
+    width: 100%;
+    height: max-content;
+    position: relative;
+}
+.inputContainer input {
+    width: 100%;
+    border-radius: 7px;
+    height: 35px;
+    font-size: 15px;
+    padding: 20px 10px;
+}
+.inputContainer input:focus {
+    outline: none;
+}
+.contactSubtitle_mob {
+    margin-top: 20px;
+    user-select: none;
+}
+.contactContainer_mob {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.contactContainer_mob div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contactContainer_mob a {
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+}
+@media (max-width: 1068px) {
+    .container {
+        padding: 20px 0px 60px 0;
+    }
+    .footer_desktop {
+        display: none;
+    }
+    .footer_mob {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .credits p {
+        color: #fff;
+        font-weight: 100;
+    }
 }

@@ -73,7 +73,10 @@ function Section({ children }: { children: ReactNode }) {
     }, [isInView]);
 
     return (
-        <section ref={ref}>
+        <section
+            ref={ref}
+            className={style.sectionAnim}
+        >
             <span
                 style={{
                     width: "100%",
