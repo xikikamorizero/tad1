@@ -7,6 +7,9 @@ html {
     font-family: sans-serif;
     height: 100%;
 }
+a {
+    user-select: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -36,8 +39,8 @@ body {
     --info_text: 20px;
     --card_info_text: 20px;
     --footer_title_size: 155px;
-    --footer_title_size_mob:30vw;
-    --footer_subtitle_size_mob:4vw;
+    --footer_title_size_mob: 30vw;
+    --footer_subtitle_size_mob: 4vw;
 
     --max_width: 1440px;
     --container: 90%;
@@ -52,13 +55,13 @@ body {
     --footer_background_color: #14191c;
 }
 
-@media (max-width:1518px) {
-    :root{
+@media (max-width: 1518px) {
+    :root {
         --title_size: 8.5vw;
     }
 }
-@media (max-width:1068px) {
-    :root{
+@media (max-width: 1068px) {
+    :root {
         --footer_title_size: 15vw;
         --email_size: 3vw;
         --info_text: 15px;
@@ -66,14 +69,14 @@ body {
         --ticker_size: 7vw;
     }
 }
-@media (max-width:900px) {
-    :root{
+@media (max-width: 900px) {
+    :root {
         --subtitle_size: 20px;
     }
 }
-@media (max-width:500px) {
-    :root{
-        --footer_subtitle_size_mob:18px;
+@media (max-width: 500px) {
+    :root {
+        --footer_subtitle_size_mob: 18px;
         --subtitle_size: 14px;
     }
 }
