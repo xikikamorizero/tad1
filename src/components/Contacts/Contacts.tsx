@@ -8,7 +8,7 @@ import youtube from "../../assets/telegram.svg";
 
 export const Contacts = () => {
     return (
-        <div className={style.wrapper}>
+        <div className={style.wrapper} id={"contacts"}>
             <div className={style.container}>
                 <h1>ЕСТЬ ВОПРОСЫ?</h1>
                 <h1 className={style.subtitle}>СПРАШИВАЙ</h1>

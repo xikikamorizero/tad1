@@ -28,7 +28,7 @@ export const Reviews = () => {
     };
 
     return (
-        <div className={style.wrapper}>
+        <div className={style.wrapper} id={"review"}>
             <div className={style.container}>
                 <h1>ЧТО ГОВОРЯТ</h1>
                 <h1 className={style.subtitle}>О НАС</h1>

@@ -9,7 +9,7 @@ import image4 from "../../assets/portfolio_4.png";
 import image5 from "../../assets/portfolio_5.png";
 export const Portfolio = () => {
     return (
-        <div className={style.wrapper}>
+        <div className={style.wrapper} id={"portfolio"}>
             <AnimText />
             <div className={style.container}>
                 <div className={style.titleContainer}>
