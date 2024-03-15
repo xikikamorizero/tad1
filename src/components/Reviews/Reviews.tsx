@@ -54,7 +54,7 @@ export const Reviews = () => {
                     </div>
                     <div className={style.slaider}>
                         <div className={style.shadowBlock}></div>
-                        <SlaiderLine left={-frame * 850}>
+                        <SlaiderLine left={-frame}>
                             {person.map((a, i) => (
                                 <CardReview scaleML={i - 1 != frame} key={i} />
                             ))}
@@ -101,10 +101,10 @@ const SlaiderLine = styled.div<{ left: number }>`
     gap: 50px;
     position: absolute;
     top: 0px;
-    left: ${(props) => props.left}px;
+    left: ${(props) => props.left * 850}px;
     transition: all 0.3s;
     @media (max-width: 1390px) {
-        gap: 0px;
+        left: ${(props) => props.left * 390}px;
     }
 `;
 
@@ -124,7 +124,7 @@ const CardContainer = styled.div<{ scaleML?: boolean }>`
 
     @media (max-width: 1033px) {
         width: 100%;
-        max-width: 400px;
+        max-width: 340px;
         flex-direction: column-reverse;
         height: max-content;
         max-height: 570px;
@@ -146,7 +146,7 @@ const PersonImage = styled.div<{ icon: string }>`
     cursor: pointer;
     @media (max-width: 1033px) {
         width: 100%;
-        height: 350px;
+        height: 300px;
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 20px;
