@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Footer.module.css";
 import styled from "styled-components";
-import arrow from '../../assets/input_arrow.svg';
+import arrow from "../../assets/input_arrow.svg";
 
 export const Footer = () => {
     return (
@@ -31,7 +31,9 @@ export const Footer = () => {
                             <p>Мы помогаем вам</p>
                             <p>расти и рассказывать их истории миру.</p>
                             <br />
-                            <a className={style.mail} target={"_blank"}>info@po4ta.ru</a>
+                            <a className={style.mail} target={"_blank"}>
+                                info@po4ta.ru
+                            </a>
                         </div>
                     </div>
                     <div className={style.contactInfoContainer_mob}>
@@ -67,7 +69,7 @@ export const Footer = () => {
     );
 };
 
-const Icon = styled.div<{icon?: string }>`
+const Icon = styled.div<{ icon?: string }>`
     width: 30px;
     height: 30px;
     flex-shrink: 0;

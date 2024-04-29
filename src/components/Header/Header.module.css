@@ -26,6 +26,10 @@
     background-size: cover;
     cursor: pointer;
     z-index: 10;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .navbar {
     width: 70%;
@@ -42,6 +46,9 @@
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
 }
@@ -78,6 +85,9 @@
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -113,6 +123,9 @@
     font-size: 30px;
     text-transform: uppercase;
     color: #fff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
     text-decoration: none;
