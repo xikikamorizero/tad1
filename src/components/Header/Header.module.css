@@ -61,6 +61,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 .burger {
     width: max-content;
@@ -69,7 +70,14 @@
     cursor: pointer;
     display: none;
     z-index: 10;
+    /* -webkit-tap-highlight-color: transparent; */
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 .burgerIcon {
     width: 30px;
     height: 20px;
