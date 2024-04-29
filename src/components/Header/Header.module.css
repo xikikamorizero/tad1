@@ -122,13 +122,14 @@
     font-weight: 400;
     font-size: 30px;
     text-transform: uppercase;
-    color: #fff;
+    color: rgb(173, 69, 69);
+    cursor: pointer;
+    text-decoration: none;
+
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    cursor: pointer;
-    text-decoration: none;
 }
 @media (max-width: 900px) {
     .wrapper {
